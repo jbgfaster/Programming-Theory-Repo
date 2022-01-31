@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShooter : EnemyMovment
+public class EnemyShooter : Enemy
 {
     [SerializeField] float shootDistance = 20.0f;
     [SerializeField] GameObject bullet;

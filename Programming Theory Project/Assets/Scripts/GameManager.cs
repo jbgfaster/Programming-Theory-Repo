@@ -9,9 +9,11 @@ public class GameManager : MonoBehaviour
     public Slider hpSlider;
     public float hp = 100;
     public bool isGame=true;
+    public static GameManager Instance{get;private set;}
     // Start is called before the first frame update
     void Start()
     {
+    	Instance=this;
         tower = GameObject.Find("Tower");
     }
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBomber : EnemyMovment
+public class EnemyBomber : Enemy
 {
 
     void Update()
