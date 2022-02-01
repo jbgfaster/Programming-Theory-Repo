@@ -12,22 +12,29 @@ public class Bullet : MonoBehaviour
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         Invoke("DestroySelf", 5);
+        transform.Rotate(Vector3.right * 90);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward*speed*Time.deltaTime);
+        transform.Translate(Vector3.up*speed*Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player")&&CompareTag("EnemyBullet"))
         {
             gameManager.Damage(1);
+            DestroySelf();
+        }
+        else if(other.CompareTag("Enemy") && CompareTag("PlayerBullet"))
+        {
+            Destroy(other.gameObject);
+            DestroySelf();
         }
         
-        DestroySelf();
+        
     }
 
     private void DestroySelf()

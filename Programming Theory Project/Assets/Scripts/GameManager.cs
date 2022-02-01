@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public GameObject tower;
+    public GameObject[] towerUpgrades;
     public Slider hpSlider;
     public float hp = 100;
     public bool isGame=true;
-    public static GameManager Instance{get;private set;}
-    // Start is called before the first frame update
+    public static GameManager Instance{get;private set;}//INCAPSULATION gamemanager can only be get from another places in code, but not set.
+
+
     void Start()
     {
     	Instance=this;
@@ -31,4 +33,5 @@ public class GameManager : MonoBehaviour
             Debug.Log("Game Over");
         }
     }
+
 }

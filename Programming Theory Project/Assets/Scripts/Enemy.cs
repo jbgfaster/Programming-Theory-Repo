@@ -13,7 +13,6 @@ public class Enemy : MonoBehaviour
         tower = GameObject.Find("Tower");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (canMove)

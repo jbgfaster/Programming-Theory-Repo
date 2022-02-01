@@ -111,4 +111,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e87de89e574b89841a5a7ddc0abead6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  bonus: {fileID: 2223784731910150492, guid: 0190fe9c047b43747b42cd7954f55162, type: 3}

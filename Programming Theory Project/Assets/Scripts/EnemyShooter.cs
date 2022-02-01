@@ -25,6 +25,7 @@ public class EnemyShooter : Enemy
     {
         transform.LookAt(tower.transform);
         GameObject temp =  Instantiate(bullet,transform.position, transform.localRotation);
+        temp.tag = "EnemyBullet";
         temp.transform.LookAt(tower.transform);
         Invoke("ShootTimer", 1);
     }

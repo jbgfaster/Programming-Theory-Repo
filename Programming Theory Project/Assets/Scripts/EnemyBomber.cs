@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBomber : Enemy
 {
-
+    //INHERITANCE This class inherit Enemy class  use method MoveToPlayer, but after Collide with player destroy self and damage Player
     void Update()
     {
         if (canMove)
@@ -21,7 +21,7 @@ public class EnemyBomber : Enemy
     {
         if (other.CompareTag("Player"))
         {            
-            gameManager.Damage(10);
+            GameManager.Instance.Damage(10);
             Bang();
         }
     }
